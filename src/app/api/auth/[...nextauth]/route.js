@@ -3,11 +3,11 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { User } from "../../models/user";
 
-export const authOptions = {
+
+export default  NextAuth({
   secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
-      // The name to display on the sign in form (e.g. 'Sign in with...')
       name: 'Credentials',
       id: 'credentials',
       credentials: {
@@ -27,8 +27,4 @@ export const authOptions = {
       }
     })
   ]
-};
-
-const handler = NextAuth(authOptions);
-
-export { handler as GET, handler as POST };
+});
