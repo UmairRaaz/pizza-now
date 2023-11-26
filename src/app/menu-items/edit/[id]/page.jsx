@@ -21,7 +21,7 @@ const EditMenuItem = () => {
         setmenuItem(item);
       });
     });
-  }, []);
+  }, [id]);
 
   let handleFormSubmit = async (e, data) => {
     e.preventDefault();

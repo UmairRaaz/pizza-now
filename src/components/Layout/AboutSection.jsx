@@ -7,7 +7,7 @@ const AboutSection = () => {
         <SectionHeaders mainhead={"Our Story"} subhead={"About Us"} />
         <div className="text-gray-500 max-w-md mx-auto mt-4 flex flex-col gap-4">
           <p >🍕 Serving Happiness, One Slice at a Time!</p>
-          <p >Welcome to Pizza Now, where passion meets delivery excellence. At Pizza Now, we're not just about delivering pizzas; we are on a mission to bring joy to your doorstep through mouthwatering, freshly baked pizzas.</p>
+          <p >Welcome to Pizza Now, where passion meets delivery excellence. At Pizza Now, we are not just about delivering pizzas; we are on a mission to bring joy to your doorstep through mouthwatering, freshly baked pizzas.</p>
         </div>
       </section>
   )

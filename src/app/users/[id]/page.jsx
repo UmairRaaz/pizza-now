@@ -17,7 +17,7 @@ const EditUserPage = () => {
         .then(user => {
           setuser(user)
         });
-    }, []);
+    }, [id]);
 
     const handleSaveButtonLink = async (ev, data) => {
       ev.preventDefault();

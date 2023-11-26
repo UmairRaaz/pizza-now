@@ -26,7 +26,7 @@ export function AppProvider({ children }) {
         if (ls && ls.getItem("cart")) {
             setcartProducts(JSON.parse(ls.getItem("cart")))
         }
-    }, [])
+    }, [ls])
 
     const clearCart = () => {
         setcartProducts([])

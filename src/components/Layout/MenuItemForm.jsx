@@ -14,7 +14,7 @@ const MenuItemForm = ({ onSubmit, menuItem }) => {
   console.log(category)
   useEffect(()=>{
     fetch(`${apiURl}/api/categories`).then(res => res.json().then(categories => setcategories(categories)))
-  }, [])
+  }, [apiURl])
   return (
     <div>
       <form

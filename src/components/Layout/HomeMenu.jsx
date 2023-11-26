@@ -29,7 +29,7 @@ const HomeMenu = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {bestSeller?.length > 0 && bestSeller.map(item => (
-        <MenuItem {...item} />
+        <MenuItem key={bestSeller.length} {...item} />
       ))}
       </div>
     </section>
