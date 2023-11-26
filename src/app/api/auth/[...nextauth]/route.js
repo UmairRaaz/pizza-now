@@ -1,10 +1,11 @@
+// src/pages/api/auth/[...nextauth].js
+
 import mongoose from "mongoose";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { User } from "../../models/user";
 
-
-export default  NextAuth({
+export default NextAuth({
   secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
@@ -26,5 +27,18 @@ export default  NextAuth({
         return null;
       }
     })
-  ]
+  ],
+  callbacks: {
+    async jwt(token, user) {
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
+    },
+    async session(session, token) {
+      session.user.id = token.id;
+      return session;
+    }
+  }
 });
+
